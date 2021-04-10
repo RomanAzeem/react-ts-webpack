@@ -10,23 +10,53 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/components/App.tsx":
-/*!********************************!*\
-  !*** ./src/components/App.tsx ***!
-  \********************************/
+/***/ "./src/App.tsx":
+/*!*********************!*\
+  !*** ./src/App.tsx ***!
+  \*********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.App = void 0;\r\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\r\nvar App = function (props) { return (React.createElement(\"h1\", null,\r\n    \"Hi \",\r\n    props.userName,\r\n    \" from React! Welcome to \",\r\n    props.lang,\r\n    \"!\")); };\r\nexports.App = App;\r\n\n\n//# sourceURL=webpack://react-ts-webpack/./src/components/App.tsx?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.App = void 0;\r\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\r\nvar Navbar_1 = __webpack_require__(/*! ./layouts/Navbar */ \"./src/layouts/Navbar.tsx\");\r\nvar VideoGames_1 = __webpack_require__(/*! ./containers/VideoGames */ \"./src/containers/VideoGames.tsx\");\r\nvar Contact_1 = __webpack_require__(/*! ./containers/Contact */ \"./src/containers/Contact.tsx\");\r\nvar react_router_dom_1 = __webpack_require__(Object(function webpackMissingModule() { var e = new Error(\"Cannot find module 'react-router-dom'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));\r\nvar App = function () {\r\n    return (React.createElement(react_router_dom_1.BrowserRouter, null,\r\n        React.createElement(Navbar_1.Navbar, null),\r\n        React.createElement(react_router_dom_1.Switch, null,\r\n            React.createElement(react_router_dom_1.Route, { path: \"/video-games\" },\r\n                React.createElement(VideoGames_1.VideoGames, null)),\r\n            React.createElement(react_router_dom_1.Route, { path: \"/contact\" },\r\n                React.createElement(Contact_1.Contact, null)))));\r\n};\r\nexports.App = App;\r\n\n\n//# sourceURL=webpack://react-ts-webpack/./src/App.tsx?");
 
 /***/ }),
 
-/***/ "./src/components/index.tsx":
-/*!**********************************!*\
-  !*** ./src/components/index.tsx ***!
-  \**********************************/
+/***/ "./src/containers/Contact.tsx":
+/*!************************************!*\
+  !*** ./src/containers/Contact.tsx ***!
+  \************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\r\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\r\nvar App_1 = __webpack_require__(/*! ./App */ \"./src/components/App.tsx\");\r\nReactDOM.render(React.createElement(App_1.App, { userName: \"Beveloper\", lang: \"TypeScript\" }), document.getElementById('output'));\r\n\n\n//# sourceURL=webpack://react-ts-webpack/./src/components/index.tsx?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.Contact = void 0;\r\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\r\nvar react_1 = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\r\nvar Contact = function () {\r\n    return (React.createElement(react_1.Fragment, null,\r\n        React.createElement(\"div\", null, \"Hi from Contact Form\")));\r\n};\r\nexports.Contact = Contact;\r\n\n\n//# sourceURL=webpack://react-ts-webpack/./src/containers/Contact.tsx?");
+
+/***/ }),
+
+/***/ "./src/containers/VideoGames.tsx":
+/*!***************************************!*\
+  !*** ./src/containers/VideoGames.tsx ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.VideoGames = void 0;\r\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\r\nvar react_1 = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\r\nvar VideoGames = function () {\r\n    return (React.createElement(react_1.Fragment, null,\r\n        React.createElement(\"div\", null, \"Hi from Video Games\")));\r\n};\r\nexports.VideoGames = VideoGames;\r\n\n\n//# sourceURL=webpack://react-ts-webpack/./src/containers/VideoGames.tsx?");
+
+/***/ }),
+
+/***/ "./src/index.tsx":
+/*!***********************!*\
+  !*** ./src/index.tsx ***!
+  \***********************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\r\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\r\nvar App_1 = __webpack_require__(/*! ./App */ \"./src/App.tsx\");\r\nReactDOM.render(React.createElement(App_1.App, null), document.getElementById('output'));\r\n\n\n//# sourceURL=webpack://react-ts-webpack/./src/index.tsx?");
+
+/***/ }),
+
+/***/ "./src/layouts/Navbar.tsx":
+/*!********************************!*\
+  !*** ./src/layouts/Navbar.tsx ***!
+  \********************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.Navbar = void 0;\r\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\r\nvar react_1 = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\r\nvar Navbar = function () {\r\n    return (React.createElement(react_1.Fragment, null,\r\n        React.createElement(\"div\", null,\r\n            React.createElement(\"ul\", null,\r\n                React.createElement(\"li\", null,\r\n                    React.createElement(\"a\", { href: \"/video-games\" }, \"Video Games\")),\r\n                React.createElement(\"li\", null,\r\n                    React.createElement(\"a\", { href: \"contact\" }, \"Contact\"))))));\r\n};\r\nexports.Navbar = Navbar;\r\nexports.Navbar.propTypes = {};\r\n\n\n//# sourceURL=webpack://react-ts-webpack/./src/layouts/Navbar.tsx?");
 
 /***/ }),
 
@@ -151,7 +181,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/components/index.tsx");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.tsx");
 /******/ 	
 /******/ })()
 ;

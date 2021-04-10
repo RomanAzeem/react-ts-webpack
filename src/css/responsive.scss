@@ -1,0 +1,8 @@
+@media (max-width: 425px) {
+  .form {
+    grid-template-columns: 1fr !important;
+  }
+  .form .email {
+    grid-column: 1 !important;
+  }
+}
