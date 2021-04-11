@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './css/style.scss';
+import './css/styles.scss';
 import { Navbar } from './layouts/Navbar';
 import { VideoGames } from './containers/VideoGames';
 import { Contact } from './containers/Contact';

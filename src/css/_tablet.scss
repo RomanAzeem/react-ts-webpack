@@ -1,0 +1,44 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+  .video-games-page {
+    display: block !important;
+    .filter-section {
+      margin-bottom: 100px;
+    }
+    .games-list-area {
+      margin-bottom: 20px;
+    }
+    .filter-section {
+      width: 100%;
+      .filter-card {
+        position: relative;
+        display: grid;
+        grid-column-gap: 10px;
+        grid-template-columns: 1fr 2fr 1fr;
+        .heading {
+          grid-column: 1 / span 3;
+        }
+        .name {
+          grid-column: 1 / span 3;
+        }
+        .score {
+          grid-column: 1;
+        }
+
+        .order {
+          grid-column: 2;
+        }
+
+        .clear-button {
+          grid-column: 3;
+          display: grid;
+          justify-self: center;
+          align-self: center;
+          margin-bottom: 7px;
+          button {
+            padding: 8px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,219 @@
+@use 'config';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: linear-gradient(#081221, #03080f);
+  font-family: 'Mulish', sans-serif;
+  min-height: 100vh;
+}
+label {
+  font-size: 14px;
+}
+h2,
+h3,
+h5,
+label {
+  font-weight: 500;
+  color: config.$hblColor;
+  font-family: config.$hblFontFamily;
+}
+p {
+  font-weight: 100;
+  font-size: 11px;
+  color: config.$textColor;
+  font-family: config.$hblFontFamily;
+}
+input {
+  font-family: config.$hblFontFamily;
+  background-color: config.$inputBackground;
+  color: config.$textColor;
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  min-height: 30px;
+  width: 100%;
+}
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 5px 15px;
+  background-color: config.$buttonColor;
+  color: config.$hblColor;
+}
+select {
+  font-family: config.$hblFontFamily;
+  background-color: config.$inputBackground;
+  color: config.$textColor;
+  min-height: 30px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+textarea {
+  padding: 5px;
+  font-family: config.$hblFontFamily;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: config.$textColor;
+  background-color: config.$inputBackground;
+  max-width: 100%;
+  min-height: 100px;
+  max-height: 200px;
+}
+.container {
+  padding: 0 30px;
+}
+.showcase {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  .nav {
+    font-family: config.$hblFontFamily;
+    display: grid;
+    align-content: center;
+    min-height: 150px;
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        margin: 0 10px;
+        a {
+          text-decoration: none;
+          color: config.$hblColor;
+          font-size: 26px;
+        }
+        a:hover {
+          color: rgb(185, 153, 92);
+        }
+      }
+    }
+  }
+  .video-games-page {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-column-gap: 10px;
+    .filter-section {
+      min-height: 300px;
+      .filter-card {
+        padding: 20px;
+        background-color: config.$cardPanelColor;
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+        .heading {
+          margin-bottom: 30px;
+        }
+        .name {
+          margin-bottom: 30px;
+        }
+        .score {
+          margin-bottom: 30px;
+        }
+        .order {
+          margin-bottom: 10px;
+        }
+        .clear-button {
+          display: grid;
+          justify-content: end;
+        }
+      }
+    }
+    .loader {
+      color: config.$hblColor;
+      text-align: center;
+    }
+  }
+  .games-list-area {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin-bottom: 10px;
+    .black-section {
+      background-color: #000;
+      height: 100%;
+    }
+    .games-list {
+      background-color: config.$cardPanelColor;
+      padding: 15px 60px 15px 15px;
+      span {
+        color: config.$textColor;
+        font-size: 12px;
+      }
+      p {
+        margin-top: 5px;
+      }
+    }
+    .rating {
+      background-color: config.$buttonColor;
+      color: config.$hblColor;
+      min-width: 35px;
+      min-height: 35px;
+      border-radius: 35px /2px * 100%;
+      position: absolute;
+      display: grid;
+      align-self: center;
+      justify-content: center;
+      align-content: center;
+      right: 20px;
+    }
+  }
+}
+.contact-form {
+  position: relative;
+  max-width: 500px;
+  min-height: 300px;
+  max-height: 500px;
+  margin: 0 auto;
+  .content {
+    margin: 10px 0 50px 0;
+    h2 {
+      margin: 5px 0;
+    }
+    p {
+      margin: 5px 0;
+      color: config.$textColor;
+      line-height: 1.2rem;
+      font-size: 12px;
+    }
+  }
+  .card {
+    padding: 20px;
+    background-color: config.$cardPanelColor;
+    h3 {
+      margin: 10px 0 25px 0;
+    }
+    .form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 40px;
+      .message {
+        grid-column: 1 / span 2;
+      }
+      .button {
+        justify-self: end;
+        button:hover {
+          background-color: #0f4796;
+        }
+      }
+      input {
+        margin: 10px 0;
+        width: 100%;
+      }
+      textarea {
+        margin: 10px 0;
+      }
+    }
+  }
+}
+@import './utilites';
+@import './responsive';
+@import './tablet';
+@import './mobile';

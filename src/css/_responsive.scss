@@ -1,0 +1,20 @@
+@media (max-width: 767px) {
+  body {
+    height: unset;
+  }
+  .showcase {
+    .nav {
+      ul {
+        display: block;
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    height: unset;
+  }
+}

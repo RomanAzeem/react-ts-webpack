@@ -28,7 +28,12 @@ export const ContactForm = () => {
                   </label>
                 </div>
                 <div className="name-input">
-                  <input type="text" id="name"></input>
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    autoComplete="off"
+                  ></input>
                 </div>
               </div>
               <div className="email col-2">
@@ -38,7 +43,12 @@ export const ContactForm = () => {
                   </label>
                 </div>
                 <div className="email-input">
-                  <input type="email" id="email"></input>
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    autoComplete="off"
+                  ></input>
                 </div>
               </div>
               <div className="message">
@@ -48,7 +58,7 @@ export const ContactForm = () => {
                   </label>
                 </div>
                 <div className="message-area">
-                  <textarea></textarea>
+                  <textarea required autoComplete="off"></textarea>
                 </div>
               </div>
               <div className="button col-2">
