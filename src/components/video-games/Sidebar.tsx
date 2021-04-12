@@ -1,11 +1,19 @@
 import * as React from 'react';
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 
 export const Sidebar = (props: any) => {
-  const [name, setName] = useState('');
-  // const onChange = (e: any) => {
-  //   setName(e.target.value);
-  // };
+  const [formData, setFormData] = useState({
+    name: '',
+    score: '',
+    order: '',
+  });
+  const { name, score, order } = formData;
+  useEffect(() => {
+    props.searchGames(name, score, order);
+  }, [formData]);
+  const onChange = (e: any) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
   return (
     <Fragment>
       <div className='filter-section col-1'>
@@ -18,32 +26,42 @@ export const Sidebar = (props: any) => {
             <input
               type='text'
               required
+              name='name'
+              value={name}
+              onChange={onChange}
               autoComplete='off'
-              onKeyPress={(e: any) => {
-                e.keyCode == 13 && console.log('Hello World');
-              }}
-              onChange={(e: any) => props.searchGame(e.target.value)}
             ></input>
           </div>
           <div className='score'>
             <label>Minimum Score</label>
             <input
               type='number'
-              placeholder='1-10'
-              required
+              name='score'
               autoComplete='off'
+              value={score}
+              placeholder='1-100'
+              required
+              onChange={onChange}
             ></input>
           </div>
           <div className='order'>
             <label>Order By</label>
-            <select>
-              <option value='date'>Release Date</option>
+            <select id='select' name='order' onChange={onChange}>
+              <option defaultValue='date'>Release Date</option>
               <option value='score'>Score</option>
               <option value='name'>Name</option>
             </select>
           </div>
           <div className='clear-button'>
-            <button type='button'>Clear</button>
+            <button
+              type='button'
+              onClick={() => {
+                props.clearFilters();
+                setFormData({ ...formData, name: '', score: '', order: '' });
+              }}
+            >
+              Clear
+            </button>
           </div>
         </div>
       </div>

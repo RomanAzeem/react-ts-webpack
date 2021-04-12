@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Fragment, useEffect, useState } from 'react';
+import { dateFormatter } from '../../utilities/date';
 export interface Props {
+  dataStatus: boolean;
   data: Array<{
     id: string;
     first_release_date: number;
@@ -11,7 +13,11 @@ export interface Props {
 }
 export const GameList = (props: Props) => {
   if (props.data.length == 0) {
-    return <div className='loader'>Loading...</div>;
+    return (
+      <div className='loader'>
+        {props.dataStatus ? 'Loading...' : 'No Data Found'}
+      </div>
+    );
   }
   return (
     <Fragment>
@@ -23,9 +29,7 @@ export const GameList = (props: Props) => {
               <div className='games-list col-2'>
                 <h3>{game.name}</h3>
                 <span>
-                  {`Release Date: ${new Date(
-                    game.first_release_date
-                  ).toLocaleDateString('en-US')}`}{' '}
+                  {`Release Date: ${dateFormatter(game.first_release_date)}`}{' '}
                 </span>
                 <p>{game.summary}</p>
               </div>
