@@ -47,7 +47,8 @@ export const VideoGames = () => {
       } else {
         if (score.toString().length !== 1) {
           //only score
-          const data = gamesData.filter(
+          setGamesData(pureData);
+          const data = pureData.filter(
             (n) => Number(Math.round(n.rating)) == Number(score)
           );
           if (data.length == 0) {
