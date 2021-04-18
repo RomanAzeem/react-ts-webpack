@@ -47,7 +47,10 @@ export const Sidebar = (props: any) => {
           <div className='order'>
             <label>Order By</label>
             <select id='select' name='order' onChange={onChange}>
-              <option defaultValue='date'>Release Date</option>
+              <option value='' selected disabled hidden>
+                Select
+              </option>
+              <option value='date'>Release Date</option>
               <option value='score'>Score</option>
               <option value='name'>Name</option>
             </select>
@@ -58,6 +61,10 @@ export const Sidebar = (props: any) => {
               onClick={() => {
                 props.clearFilters();
                 setFormData({ ...formData, name: '', score: '', order: '' });
+                const selectElement = document.getElementById(
+                  'select'
+                ) as HTMLSelectElement;
+                selectElement.selectedIndex = 0;
               }}
             >
               Clear
